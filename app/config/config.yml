@@ -499,6 +499,9 @@ liip_monitor:
 
         doctrine_dbal: default
 
+        security_advisory:
+            lock_file: '%kernel.root_dir%/../composer.lock'
+
         readable_directory:
             - '%kernel.cache_dir%'
             - '%user_profile_upload_dir%'
