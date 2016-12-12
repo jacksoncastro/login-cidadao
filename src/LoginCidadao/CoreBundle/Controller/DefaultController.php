@@ -18,36 +18,6 @@ class DefaultController extends Controller
 {
 
     /**
-     * @Route("/login/facebook", name="lc_link_facebook")
-     */
-    public function facebookLoginAction(Request $request)
-    {
-        $shouldLogout = $request->get('logout');
-        if (!is_null($shouldLogout)) {
-            $this->get('session')->set('facebook.logout', true);
-        }
-
-        $api = $this->container->get('fos_facebook.api');
-        $scope = implode(
-            ',',
-            $this->container->getParameter('facebook_app_scope')
-        );
-        $callback = $this->container->get('router')->generate(
-            '_security_check_facebook',
-            array(),
-            true
-        );
-        $redirect_url = $api->getLoginUrl(
-            array(
-                'scope' => $scope,
-                'redirect_uri' => $callback,
-            )
-        );
-
-        return new RedirectResponse($redirect_url);
-    }
-
-    /**
      * @Route("/help", name="lc_help")
      * @Template()
      */
@@ -77,7 +47,7 @@ class DefaultController extends Controller
                 ->setType('contact-mail')
                 ->setSubject('Fale conosco - '.$data->getName())
                 ->setSender($data->getEmail())
-                ->setReceiver($this->container->getParameter('mailer_receiver_mail'))
+                ->setReceiver($this->container->getParameter('contact_form.email'))
                 ->setMessage($emailMessage);
             $mailer = $this->get('mailer');
             $swiftMail = $email->getSwiftMail();

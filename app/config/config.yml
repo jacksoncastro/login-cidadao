@@ -143,6 +143,8 @@ doctrine:
         # if using pdo_sqlite as your database driver, add the path in parameters.yml
         # e.g. database_path: %kernel.root_dir%/data/data.db3
         # path:     %database_path%
+        types:
+            phone_number: Misd\PhoneNumberBundle\Doctrine\DBAL\Types\PhoneNumberType
 
     orm:
         auto_generate_proxy_classes: %kernel.debug%
@@ -242,13 +244,6 @@ simple_things_entity_audit:
         - LoginCidadao\OAuthBundle\Entity\RefreshToken
         - LoginCidadao\OAuthBundle\Entity\Organization
 
-fos_facebook:
-    alias:  facebook
-    app_id: %facebook_app_id%
-    secret: %facebook_app_secret%
-    cookie: true
-    permissions: %facebook_app_scope%
-
 hwi_oauth:
     connect:
         confirmation: false
@@ -257,9 +252,15 @@ hwi_oauth:
     fosub:
         username_iterations: 30
         properties:
+            facebook: facebookId
             twitter: twitterId
             google: googleId
     resource_owners:
+        facebook:
+            type:           facebook
+            client_id:      %facebook_app_id%
+            client_secret:  %facebook_app_secret%
+            scope:          "email user_about_me user_birthday user_location"
         twitter:
             type:           twitter
             client_id:      %twitter_app_key%
