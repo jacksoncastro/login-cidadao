@@ -17,6 +17,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/PROCERGS/stack-request-id"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/PROCERGS/FOSUserBundle"
         }
     ],
     "require": {
@@ -32,8 +36,13 @@
         "sensio/distribution-bundle": "~3.0,>=3.0.12",
         "sensio/framework-extra-bundle": "~3.0,>=3.0.2,<3.0.13",
         "incenteev/composer-parameter-handler": "~2.0",
+<<<<<<< HEAD
+        "friendsofsymfony/user-bundle": "2.0.0-alpha3.1",
+        "friendsofsymfony/oauth-server-bundle": "dev-master",
+=======
         "friendsofsymfony/user-bundle": "~2.0@dev",
         "friendsofsymfony/oauth-server-bundle": "^1.5",
+>>>>>>> issue#726
         "jms/serializer-bundle": "*",
         "simplethings/entity-audit-bundle": "^1.0",
         "hwi/oauth-bundle": "^0.4",
@@ -42,8 +51,13 @@
         "knplabs/gaufrette": "^0.3",
         "friendsofsymfony/rest-bundle": "1.7.*",
         "michelf/php-markdown": "1.4.1",
+<<<<<<< HEAD
+        "nelmio/api-doc-bundle": "@dev",
+        "jms/security-extra-bundle": "^1.6",
+=======
         "nelmio/api-doc-bundle": "^2",
         "jms/security-extra-bundle": "*",
+>>>>>>> issue#726
         "procergs/login-cidadao-badges-bundle": "^2.0",
         "scheb/two-factor-bundle": "^2",
         "procergs/tos-bundle": "^1.4",
@@ -56,7 +70,11 @@
         "liip/monitor-bundle": "^2.2",
         "guzzlehttp/guzzle": "^5.3",
         "guilhermednt/pathwell-bundle": "^0.1",
+<<<<<<< HEAD
         "beelab/recaptcha2-bundle": "dev-legacy",
+=======
+        "beelab/recaptcha2-bundle": "^1",
+>>>>>>> issue#726
         "bmatzner/fontawesome-bundle": "^4.6",
         "ramsey/uuid": "^3.5",
         "qandidate/stack-request-id": "dev-ramsey-uuid-v3",
