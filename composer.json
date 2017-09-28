@@ -69,7 +69,9 @@
         "procergs/nfg-badges-bundle": "^1.1",
         "jakeasmith/http_build_url": "^1",
         "procergs/sms-service": "^1.2",
-        "eljam/circuit-breaker": ">=0.1.2"
+        "eljam/circuit-breaker": ">=0.1.2",
+        "snc/redis-bundle": "^2",
+        "predis/predis": "^1.1"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",

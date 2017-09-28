@@ -62,6 +62,7 @@ class AppKernel extends Kernel
             new LoginCidadao\PhoneVerificationBundle\LoginCidadaoPhoneVerificationBundle(),
             new LoginCidadao\TaskStackBundle\LoginCidadaoTaskStackBundle(),
             new LoginCidadao\DynamicFormBundle\LoginCidadaoDynamicFormBundle(),
+            new Snc\RedisBundle\SncRedisBundle(),
 
             // PROCERGS
             new PROCERGS\LoginCidadao\CoreBundle\PROCERGSLoginCidadaoCoreBundle(),
